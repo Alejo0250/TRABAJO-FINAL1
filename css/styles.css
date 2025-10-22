@@ -1,0 +1,395 @@
+/* Estilo general del cuerpo */
+body {
+  margin: 0; /* Elimina el margen predeterminado del navegador */
+  font-family: Arial, sans-serif; /* Define la fuente general */
+  background-color: #d8b4a0; /* Aplica un color de fondo */
+}
+
+/* Estilo del encabezado */
+header {
+  display: flex; /* Usa flexbox para organizar los elementos internos */
+  align-items: center; /* Centra los elementos verticalmente */
+  justify-content: space-between; /* Separa los elementos en los extremos */
+  padding: 10px 20px; /* Añade espacio interno */
+  background-color: #a67c68; /* Color marrón del fondo del encabezado */
+  color: white; /* Texto en color blanco */
+}
+
+/* Estilo del ícono del menú */
+.menu-icon {
+  font-size: 24px; /* Tamaño del icono */
+  cursor: pointer; /* Cambia el cursor al pasar el mouse */
+}
+
+/* Estilo del título principal */
+h1 {
+  font-size: 18px; /* Tamaño de fuente */
+  margin: 0; /* Elimina márgenes del título */
+}
+
+/* Estilo del contenido principal */
+main {
+  padding: 20px; /* Espaciado interno del contenido */
+}
+
+/* Grid de tiendas */
+.tienda-grid {
+  max-width: 1100px; /* Ancho máximo del contenedor */
+  margin: 32px auto; /* Centra el grid horizontalmente */
+  display: grid; /* Usa display grid */
+  grid-template-columns: repeat(3, 1fr); /* Crea siempre 3 columnas iguales */
+  gap: 40px; /* Espacio entre tarjetas */
+  padding: 32px; /* Espaciado interno adicional */
+}
+
+/* Estilo de las imágenes de las tiendas */
+.tienda-item img {
+  width: 100%; /* Imagen ocupa todo el ancho */
+  border-radius: 5px; /* Bordes redondeados */
+}
+
+/* Estilo para pantallas pequeñas */
+@media (max-width: 600px) {
+  body {
+    background-color: lightblue; /* Fondo azul claro en pantallas pequeñas */
+  }
+}
+
+/* Estilo para pantallas medianas */
+@media (max-width: 800px) {
+  body {
+    background-color: #a67c68; /* Vuelve al marrón en pantallas medianas */
+  }
+}
+
+/* Estilo del menú de navegación */
+nav {
+  position: absolute; /* Flota sobre otros elementos */
+  top: 50px; /* Se separa del borde superior */
+  left: 20px; /* Se separa del borde izquierdo */
+  background-color: #f5f4f3; /* Fondo claro */
+  border: 1px solid #a67c68; /* Borde marrón */
+  border-radius: 5px; /* Bordes redondeados */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidad */
+}
+
+/* Estilo de la lista de navegación */
+nav ul {
+  list-style: none; /* Elimina los puntos de la lista */
+  margin: 0; /* Elimina márgenes */
+  padding: 10px; /* Espaciado interno */
+}
+
+/* Estilo de los elementos de la lista */
+nav ul li {
+  margin: 5px 10px; /* Espaciado entre los elementos */
+  cursor: pointer; /* Hace clickeables los items */
+}
+
+/* Estilo al pasar el cursor sobre los elementos */
+nav ul li:hover {
+  background-color: #f0e6e2; /* Fondo claro al pasar el mouse */
+}
+
+/* Clase para ocultar elementos */
+.hidden {
+  display: none; /* Oculta elementos visualmente */
+}
+
+/* Estilo de la sección de información de contacto */
+.contact-info {
+  margin: 20px; /* Espaciado externo */
+  font-size: 16px; /* Tamaño de fuente */
+}
+
+/* Estilo del mapa */
+.mapa iframe {
+  width: 100%; /* Ocupa todo el ancho disponible */
+  height: 300px; /* Altura fija */
+  border: none; /* Sin borde */
+  border-radius: 5px; /* Bordes redondeados */
+}
+
+/* Estilo del formulario de contacto */
+.contact-form {
+  margin: 20px; /* Espaciado externo */
+}
+
+/* Contenedor del formulario */
+.contact-form form {
+  display: flex; /* Usa flexbox */
+  flex-direction: column; /* Coloca los elementos en columna */
+  gap: 10px; /* Espaciado entre campos */
+}
+
+/* Etiquetas del formulario */
+.contact-form label {
+  font-size: 14px; /* Tamaño del texto */
+  margin-bottom: 5px; /* Espacio debajo de la etiqueta */
+}
+
+/* Campos del formulario */
+.contact-form input,
+.contact-form select,
+.contact-form button {
+  padding: 10px; /* Espaciado interno */
+  font-size: 14px; /* Tamaño del texto */
+  border: 1px solid #ccc; /* Borde gris claro */
+  border-radius: 5px; /* Bordes redondeados */
+}
+
+/* Botón de envío del formulario */
+.contact-form button {
+  background-color: #ff007f; /* Fondo rosado fuerte */
+  color: white; /* Texto blanco */
+  border: none; /* Sin borde */
+  cursor: pointer; /* Cursor tipo botón */
+}
+
+/* Efecto hover en botón */
+.contact-form button:hover {
+  background-color: #e60073; /* Oscurece el botón en hover */
+}
+
+/* Estilo de cada tarjeta de película */
+.movie-item {
+  background-color: white; /* Fondo blanco */
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
+  overflow: hidden; /* Oculta contenido que se sale del borde */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animaciones suaves */
+  cursor: pointer; /* Cursor de clic */
+}
+
+/* Efecto hover sobre tarjeta */
+.movie-item:hover {
+  transform: translateY(-8px); /* Se eleva */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2); /* Sombra más fuerte */
+}
+
+/* Imagen dentro de la tarjeta */
+.movie-item img {
+  width: 100%; /* Ocupa todo el ancho */
+  height: 200px; /* Altura fija */
+  object-fit: cover; /* Recorta sin deformar */
+  border-radius: 5px 5px 0 0; /* Redondea solo la parte superior */
+  transition: filter 0.3s ease; /* Suaviza cambios de brillo */
+}
+
+/* Efecto de brillo al pasar el mouse */
+.movie-item:hover img {
+  filter: brightness(1.1); /* Aumenta brillo */
+}
+
+/* Contenedor de texto dentro de la tarjeta */
+.movie-info {
+  padding: 15px; /* Espaciado interno */
+}
+
+/* Título de la película */
+.movie-info h3 {
+  margin: 0 0 8px 0; /* Sin margen arriba, 8px abajo */
+  font-size: 16px; /* Tamaño medio */
+  color: #333; /* Texto oscuro */
+}
+
+/* Descripción */
+.movie-info p {
+  margin: 0 0 10px 0; /* Espacio inferior */
+  font-size: 12px; /* Texto pequeño */
+  color: #666; /* Gris medio */
+  line-height: 1.4; /* Altura de línea */
+}
+
+/* Contenedor de detalles adicionales */
+.movie-details {
+  display: flex; /* Usa flexbox */
+  justify-content: space-between; /* Distribuye horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  flex-wrap: wrap; /* Permite que salte de línea */
+  gap: 5px; /* Espacio entre elementos */
+  font-size: 11px; /* Tamaño pequeño */
+}
+
+/* Año dentro de los detalles */
+.movie-details .year {
+  background-color: #a67c68; /* Fondo marrón */
+  color: white; /* Texto blanco */
+  padding: 2px 8px; /* Espaciado */
+  border-radius: 12px; /* Bordes redondeados tipo cápsula */
+}
+
+/* Género */
+.movie-details .genre {
+  background-color: #d8b4a0; /* Fondo beige */
+  color: #333; /* Texto oscuro */
+  padding: 2px 8px; /* Espaciado */
+  border-radius: 12px; /* Bordes redondeados */
+}
+
+/* Calificación */
+.movie-details .rating {
+  color: #ff6b35; /* Naranja fuerte */
+  font-weight: bold; /* Negrita */
+}
+
+/* --- MODAL --- */
+
+/* Fondo del modal */
+.modal {
+  position: fixed; /* Se fija en toda la pantalla */
+  z-index: 1000; /* Encima de todo */
+  left: 0;
+  top: 0;
+  width: 100%; /* Cubre ancho total */
+  height: 100%; /* Cubre alto total */
+  background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro semitransparente */
+  backdrop-filter: blur(5px); /* Difumina el fondo */
+}
+
+/* Contenedor del contenido del modal */
+.modal-content {
+  background-color: #fefefe; /* Fondo blanco */
+  margin: 2% auto; /* Centrado con margen arriba */
+  padding: 0; /* Sin relleno */
+  border-radius: 15px; /* Bordes redondeados */
+  width: 90%; /* Ocupa el 90% del ancho */
+  max-width: 800px; /* Máximo ancho */
+  max-height: 90vh; /* No sobrepasa el 90% del alto */
+  overflow-y: auto; /* Permite scroll vertical */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Sombra */
+  animation: modalSlideIn 0.3s ease-out; /* Animación de entrada */
+}
+
+/* Animación del modal */
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-50px); /* Comienza arriba */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* Baja a su posición */
+  }
+}
+
+/* Botón de cierre */
+.close-btn {
+  color: #aaa; /* Gris */
+  float: right; /* Alineado a la derecha */
+  font-size: 28px; /* Tamaño grande */
+  font-weight: bold; /* Negrita */
+  padding: 15px 20px 0 0; /* Espaciado */
+  cursor: pointer; /* Puntero */
+  transition: color 0.3s; /* Suaviza color */
+}
+
+/* Efecto hover en el botón de cierre */
+.close-btn:hover {
+  color: #000; /* Cambia a negro */
+}
+
+/* Cuerpo del modal */
+.modal-body {
+  display: flex;
+  flex-direction: column; /* Por defecto en columna */
+  padding: 20px;
+}
+
+/* Imagen dentro del modal */
+.modal-image {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Imagen del modal */
+.modal-image img {
+  max-width: 300px;
+  max-height: 400px;
+  object-fit: cover; /* Mantiene proporciones */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Sombra */
+}
+
+/* Título dentro del modal */
+.modal-details h2 {
+  color: #333;
+  margin-bottom: 15px;
+  font-size: 28px;
+  text-align: center;
+}
+
+/* Información general del modal */
+.modal-info {
+  display: grid; /* Usa grid */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Ajustable */
+  gap: 10px;
+  margin-bottom: 20px;
+  background-color: #f9f9f9; /* Fondo gris claro */
+  padding: 15px;
+  border-radius: 8px;
+}
+
+/* Texto dentro de la info */
+.modal-info p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+/* Sección de actores */
+.modal-cast {
+  margin-bottom: 20px;
+}
+
+/* Contenedor de actores */
+.modal-cast div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+/* Estilo de cada actor */
+.cast-member {
+  background-color: #a67c68;
+  color: white;
+  padding: 5px 12px;
+  border-radius: 15px;
+  font-size: 13px;
+}
+
+/* Sinopsis del modal */
+.modal-synopsis {
+  background-color: #f5f5f5;
+  padding: 15px;
+  border-radius: 8px;
+  border-left: 4px solid #a67c68; /* Línea lateral marrón */
+}
+
+/* Texto de la sinopsis */
+.modal-synopsis p {
+  line-height: 1.6;
+  color: #444;
+  margin-top: 10px;
+}
+
+/* Diseño responsivo para pantallas grandes */
+@media (min-width: 768px) {
+  .modal-body {
+    flex-direction: row; /* Coloca imagen y texto en fila */
+    gap: 30px; /* Espaciado entre ambos */
+  }
+
+  .modal-image {
+    flex: 0 0 300px; /* Imagen fija en 300px */
+    margin-bottom: 0; /* Elimina espacio inferior */
+  }
+
+  .modal-details {
+    flex: 1; /* Ocupa el resto del espacio */
+  }
+
+  .modal-details h2 {
+    text-align: left; /* Alinea título a la izquierda */
+  }
+}

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game - Movies La Molina</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script
+      src="https://unpkg.com/react@18/umd/react.development.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="header"></div>
+
+    <div class="min-h-screen bg-gray-50 dark:bg-gray-900 py-8">
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto text-center">
+          <div
+            class="game-area bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8"
+          >
+            <h1
+              class="text-4xl font-bold text-gray-900 dark:text-white mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"
+            >
+              Anime Game
+            </h1>
+            <p class="text-gray-600 dark:text-gray-300 mb-6">
+              ¡Usa las flechas del teclado para mover a Mario y recoger monedas!
+            </p>
+
+            <!-- Botón para comenzar -->
+            <button
+              id="start-game-btn"
+              class="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-lg mb-6 transition-colors duration-200 shadow-md hover:shadow-lg"
+              onclick="startGame()"
+            >
+              🎮 Comenzar Juego
+            </button>
+
+            <!-- Score Box -->
+            <div class="mb-6">
+              <label
+                class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+              >
+                Puntaje:
+              </label>
+              <input
+                id="score-box"
+                type="text"
+                value="0"
+                readonly
+                class="w-16 px-3 py-2 text-center border border-gray-300 dark:border-gray-600 rounded-lg bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white font-bold text-lg"
+              />
+            </div>
+
+            <!-- Game Container -->
+            <div
+              class="game-container relative w-[600px] h-[400px] bg-gray-300 dark:bg-gray-600 border-2 border-blue-500 mx-auto overflow-hidden rounded-lg shadow-inner"
+            >
+              <div
+                class="game-player absolute w-[30px] h-[30px] bg-cover bg-center bg-no-repeat"
+                style="background-image: url('imagenes/mario.png')"
+              ></div>
+            </div>
+
+            <!-- Instrucciones -->
+            <div class="mt-6 text-sm text-gray-600 dark:text-gray-400">
+              <div
+                class="grid md:grid-cols-2 gap-4 text-left max-w-2xl mx-auto"
+              >
+                <div>
+                  <h3 class="font-semibold mb-2">Controles:</h3>
+                  <ul class="space-y-1">
+                    <li>↑ Flecha Arriba</li>
+                    <li>↓ Flecha Abajo</li>
+                    <li>← Flecha Izquierda</li>
+                    <li>→ Flecha Derecha</li>
+                  </ul>
+                </div>
+                <div>
+                  <h3 class="font-semibold mb-2">Objetivo:</h3>
+                  <ul class="space-y-1">
+                    <li>🪙 Recoge las monedas</li>
+                    <li>⏰ Las monedas desaparecen en 5s</li>
+                    <li>📈 Aumenta tu puntaje</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <style>
+      .coin {
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        background: url("imagenes/coin.gif") no-repeat center center;
+        background-size: contain;
+        border-radius: 50%;
+        /* Fallback si no hay imagen */
+        background-color: orange;
+        border: 2px solid #ffa500;
+        z-index: 10;
+      }
+    </style>
+
+    <!-- Scripts al final del body -->
+    <script type="text/babel" src="js/app.js"></script>
+    <script src="js/game.js"></script>
+  </body>
+</html>
